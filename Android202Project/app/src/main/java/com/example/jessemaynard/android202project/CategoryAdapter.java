@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -15,6 +16,7 @@ import java.util.Objects;
  */
 
 public class CategoryAdapter extends BaseAdapter {
+
     // Arraylist for the categories and the items within.
         private ArrayList<Object> items;
         private LayoutInflater layoutInflater;
@@ -81,7 +83,7 @@ public class CategoryAdapter extends BaseAdapter {
 
                 title.setText(todo.getTodoTitle());
                 text.setText(todo.getTodoText());
-//                date.setText(todo.getTodoCreatedDate().toString());
+                date.setText(todo.getTodoCreatedDate().toString());
             } else if(type == TYPE_CAT){
                 String catName = (String) getItem(position);
                 TextView category = (TextView) convertView.findViewById(R.id.category);

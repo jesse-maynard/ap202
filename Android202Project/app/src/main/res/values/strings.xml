@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Android 202 Project</string>
+
+    <string-array name="cat_array">
+        <item>Personal</item>
+        <item>Work</item>
+        <item>Shopping</item>
+        <item>Misc.</item>
+    </string-array>
 </resources>

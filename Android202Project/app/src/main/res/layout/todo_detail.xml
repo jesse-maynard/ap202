@@ -7,6 +7,8 @@
 
     <EditText
         android:id="@+id/edit_title"
+        android:hint="Name"
+        android:textColorHint="#fff"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -14,28 +16,30 @@
         android:textColor="#fff"
         android:background="#222"/>
 
-    <EditText
-        android:id="@+id/edit_cat"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="#fff"
-        android:background="#222"
-        android:layout_toRightOf="@+id/edit_title"/>
+    <!--<EditText-->
+        <!--android:id="@+id/edit_cat"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:textColor="#fff"-->
+        <!--android:background="#222"-->
+        <!--android:layout_toRightOf="@+id/edit_title"/>-->
 
-    <!--<Spinner-->
-    <!--android:id="@+id/cat_spinner"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_toEndOf="@+id/edit_title"-->
-    <!--/>-->
+    <Spinner
+    android:id="@+id/cat_spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/edit_title"
+    />
 
     <EditText
         android:id="@+id/edit_text"
+        android:hint="Enter Your Todo!"
+        android:textColorHint="#fff"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:gravity="top"
         android:ems="10"
         android:layout_below="@+id/edit_title"
@@ -44,21 +48,43 @@
         android:textColor="#fff"
         android:background="#222"/>
 
-    <Button
-        android:id="@+id/set_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:textColor="#fff"
+    <TextView
+        android:id="@+id/due_date"
+        android:hint="Enter Date"
+        android:textColorHint="#fff"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_above="@+id/set_date"
         android:background="#222"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/edit_text" />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/due_date_time"
+        android:hint="Enter Time"
+        android:textColorHint="#fff"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/set_date"
+        android:layout_above="@+id/set_time"
+        android:background="#222"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        />
 
     <Button
         android:id="@+id/set_time"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Time"
+        android:onClick="showTimePickerDialog"
         android:textColor="#fff"
         android:background="#222"
         android:layout_alignParentBottom="true"
@@ -73,5 +99,16 @@
         android:background="#222"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/set_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:onClick="showDatePickerDialog"
+        android:textColor="#fff"
+        android:background="#222"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/due_date" />
 
 </RelativeLayout>

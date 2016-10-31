@@ -19,11 +19,11 @@ public class Todo implements Comparable<Todo> {
     @SerializedName("categoryID")
     private int categoryID;
 
-    public Todo(String todoTitle, String todoText, Date todoDueDate, int categoryID) {
+    public Todo(String todoTitle, String todoText, Date todoCreatedDate, Date todoDueDate, int categoryID) {
         this.todoTitle = todoTitle;
         this.todoText = todoText;
         this.todoDueDate = todoDueDate;
-//        this.todoCreatedDate = todoCreatedDate;
+        this.todoCreatedDate = todoCreatedDate;
         this.categoryID = categoryID;
     }
 
@@ -51,13 +51,13 @@ public class Todo implements Comparable<Todo> {
         this.todoDueDate = todoDueDate;
     }
 
-//    public Date getTodoCreatedDate() {
-//        return todoCreatedDate;
-//    }
-//
-//    public void setTodoCreatedDate(Date todoCreatedDate) {
-//        this.todoCreatedDate = todoCreatedDate;
-//    }
+    public Date getTodoCreatedDate() {
+        return todoCreatedDate;
+    }
+
+    public void setTodoCreatedDate(Date todoCreatedDate) {
+        this.todoCreatedDate = todoCreatedDate;
+    }
 
     public int getCategoryID() {
         return categoryID;
